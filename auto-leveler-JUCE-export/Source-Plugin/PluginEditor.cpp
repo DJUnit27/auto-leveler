@@ -22,7 +22,7 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     target.reset (new Slider ("target"));
     addAndMakeVisible (target.get());
     target->setTooltip (TRANS("Target output level"));
-    target->setRange (-70, 0, 0.01);
+    target->setRange (-30, 0, 0.01);
     target->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
     target->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     target->addListener (this);

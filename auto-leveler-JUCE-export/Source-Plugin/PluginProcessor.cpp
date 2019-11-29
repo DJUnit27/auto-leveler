@@ -212,7 +212,7 @@ void C74GenAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& 
 //==============================================================================
 bool C74GenAudioProcessor::hasEditor() const
 {
-    return false; // (change this to true if you choose to supply an editor)
+    return true; // (change this to true if you choose to supply an editor)
 }
 
 AudioProcessorEditor* C74GenAudioProcessor::createEditor()

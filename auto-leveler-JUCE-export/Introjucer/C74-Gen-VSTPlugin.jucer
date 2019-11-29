@@ -113,6 +113,6 @@
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
   <LIVE_SETTINGS>
-    <OSX/>
+    <OSX buildEnabled="0"/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>

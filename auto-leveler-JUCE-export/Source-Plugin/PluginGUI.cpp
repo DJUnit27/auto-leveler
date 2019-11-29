@@ -35,7 +35,7 @@ PluginGUI::PluginGUI ()
     target.reset (new Slider ("target"));
     addAndMakeVisible (target.get());
     target->setTooltip (TRANS("Target output level"));
-    target->setRange (-70, 0, 0.01);
+    target->setRange (-30, 0, 0.01);
     target->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
     target->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     target->addListener (this);
@@ -135,7 +135,7 @@ BEGIN_JUCER_METADATA
   <BACKGROUND backgroundColour="ff323e44"/>
   <SLIDER name="target" id="62934c1b7f2ed7c0" memberName="target" virtualName=""
           explicitFocusOrder="0" pos="20 40 180 180" tooltip="Target output level"
-          min="-70.0" max="0.0" int="0.01" style="RotaryHorizontalVerticalDrag"
+          min="-30.0" max="0.0" int="0.01" style="RotaryHorizontalVerticalDrag"
           textBoxPos="TextBoxBelow" textBoxEditable="1" textBoxWidth="80"
           textBoxHeight="20" skewFactor="1.0" needsCallback="1"/>
   <LABEL name="targetlabel" id="26cc6c7124cc1702" memberName="targetlabel"
