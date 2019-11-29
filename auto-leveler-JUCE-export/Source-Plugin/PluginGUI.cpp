@@ -32,18 +32,8 @@ PluginGUI::PluginGUI ()
     //[Constructor_pre] You can add your own custom stuff here..
     //[/Constructor_pre]
 
-    target.reset (new Slider ("target"));
-    addAndMakeVisible (target.get());
-    target->setTooltip (TRANS("Target output level"));
-    target->setRange (-30, 0, 0.01);
-    target->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
-    target->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
-    target->addListener (this);
-
-    target->setBounds (20, 40, 180, 180);
-
     targetlabel.reset (new Label ("targetlabel",
-                                  TRANS("Target")));
+                                  TRANS("Target: 20 LKFS")));
     addAndMakeVisible (targetlabel.get());
     targetlabel->setFont (Font (15.00f, Font::plain).withTypefaceStyle ("Regular"));
     targetlabel->setJustificationType (Justification::centred);
@@ -51,13 +41,13 @@ PluginGUI::PluginGUI ()
     targetlabel->setColour (TextEditor::textColourId, Colours::black);
     targetlabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
 
-    targetlabel->setBounds (20, 10, 180, 24);
+    targetlabel->setBounds (20, 75, 180, 24);
 
 
     //[UserPreSize]
     //[/UserPreSize]
 
-    setSize (220, 300);
+    setSize (220, 150);
 
 
     //[Constructor] You can add your own custom stuff here..
@@ -69,7 +59,6 @@ PluginGUI::~PluginGUI()
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
 
-    target = nullptr;
     targetlabel = nullptr;
 
 
@@ -98,21 +87,6 @@ void PluginGUI::resized()
     //[/UserResized]
 }
 
-void PluginGUI::sliderValueChanged (Slider* sliderThatWasMoved)
-{
-    //[UsersliderValueChanged_Pre]
-    //[/UsersliderValueChanged_Pre]
-
-    if (sliderThatWasMoved == target.get())
-    {
-        //[UserSliderCode_target] -- add your slider handling code here..
-        //[/UserSliderCode_target]
-    }
-
-    //[UsersliderValueChanged_Post]
-    //[/UsersliderValueChanged_Post]
-}
-
 
 
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
@@ -131,18 +105,13 @@ BEGIN_JUCER_METADATA
 <JUCER_COMPONENT documentType="Component" className="PluginGUI" componentName=""
                  parentClasses="public Component" constructorParams="" variableInitialisers=""
                  snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
-                 fixedSize="0" initialWidth="220" initialHeight="300">
+                 fixedSize="0" initialWidth="220" initialHeight="150">
   <BACKGROUND backgroundColour="ff323e44"/>
-  <SLIDER name="target" id="62934c1b7f2ed7c0" memberName="target" virtualName=""
-          explicitFocusOrder="0" pos="20 40 180 180" tooltip="Target output level"
-          min="-30.0" max="0.0" int="0.01" style="RotaryHorizontalVerticalDrag"
-          textBoxPos="TextBoxBelow" textBoxEditable="1" textBoxWidth="80"
-          textBoxHeight="20" skewFactor="1.0" needsCallback="1"/>
   <LABEL name="targetlabel" id="26cc6c7124cc1702" memberName="targetlabel"
-         virtualName="" explicitFocusOrder="0" pos="20 10 180 24" edTextCol="ff000000"
-         edBkgCol="0" labelText="Target" editableSingleClick="0" editableDoubleClick="0"
-         focusDiscardsChanges="0" fontname="Default font" fontsize="15.0"
-         kerning="0.0" bold="0" italic="0" justification="36"/>
+         virtualName="" explicitFocusOrder="0" pos="20 75 180 24" edTextCol="ff000000"
+         edBkgCol="0" labelText="Target: 20 LKFS" editableSingleClick="0"
+         editableDoubleClick="0" focusDiscardsChanges="0" fontname="Default font"
+         fontsize="15.0" kerning="0.0" bold="0" italic="0" justification="36"/>
 </JUCER_COMPONENT>
 
 END_JUCER_METADATA

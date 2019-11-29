@@ -33,8 +33,7 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class PluginGUI  : public Component,
-                   public Slider::Listener
+class PluginGUI  : public Component
 {
 public:
     //==============================================================================
@@ -47,7 +46,6 @@ public:
 
     void paint (Graphics& g) override;
     void resized() override;
-    void sliderValueChanged (Slider* sliderThatWasMoved) override;
 
 
 
@@ -56,7 +54,6 @@ private:
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<Slider> target;
     std::unique_ptr<Label> targetlabel;
 
 

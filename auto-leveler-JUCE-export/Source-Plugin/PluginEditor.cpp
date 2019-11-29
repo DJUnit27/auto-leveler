@@ -19,18 +19,8 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     //[Constructor_pre] You can add your own custom stuff here..
     //[/Constructor_pre]
 
-    target.reset (new Slider ("target"));
-    addAndMakeVisible (target.get());
-    target->setTooltip (TRANS("Target output level"));
-    target->setRange (-30, 0, 0.01);
-    target->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
-    target->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
-    target->addListener (this);
-
-    target->setBounds (20, 40, 180, 180);
-
     targetlabel.reset (new Label ("targetlabel",
-                                  TRANS("Target")));
+                                  TRANS("Target: 20 LKFS")));
     addAndMakeVisible (targetlabel.get());
     targetlabel->setFont (Font (15.00f, Font::plain).withTypefaceStyle ("Regular"));
     targetlabel->setJustificationType (Justification::centred);
@@ -38,13 +28,13 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     targetlabel->setColour (TextEditor::textColourId, Colours::black);
     targetlabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
 
-    targetlabel->setBounds (20, 10, 180, 24);
+    targetlabel->setBounds (20, 75, 180, 24);
 
 
     //[UserPreSize]
     //[/UserPreSize]
 
-    setSize (220, 300);
+    setSize (220, 150);
 
 
     //[Constructor] You can add your own custom stuff here..
@@ -56,7 +46,6 @@ C74GenAudioProcessorEditor::~C74GenAudioProcessorEditor()
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
 
-    target = nullptr;
     targetlabel = nullptr;
 
 
@@ -80,19 +69,4 @@ void C74GenAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
-}
-
-void C74GenAudioProcessorEditor::sliderValueChanged (Slider* sliderThatWasMoved)
-{
-    //[UsersliderValueChanged_Pre]
-    //[/UsersliderValueChanged_Pre]
-
-    if (sliderThatWasMoved == target.get())
-    {
-        sliderThatWasMoved->getValue();
-        processor.setParameter(0, sliderThatWasMoved->getValue());
-    }
-
-    //[UsersliderValueChanged_Post]
-    //[/UsersliderValueChanged_Post]
 }

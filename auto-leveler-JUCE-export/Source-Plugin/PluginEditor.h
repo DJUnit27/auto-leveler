@@ -18,8 +18,7 @@
 //==============================================================================
 /**
 */
-class C74GenAudioProcessorEditor  : public AudioProcessorEditor,
-                                    public Slider::Listener
+class C74GenAudioProcessorEditor  : public AudioProcessorEditor
                                     
 {
 public:
@@ -29,7 +28,6 @@ public:
     //==============================================================================
     void paint (Graphics&) override;
     void resized() override;
-    void sliderValueChanged (Slider* sliderThatWasMoved) override;
 
 private:
     // This reference is provided as a quick way for your editor to
@@ -40,7 +38,6 @@ private:
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<Slider> target;
     std::unique_ptr<Label> targetlabel;
 
 
