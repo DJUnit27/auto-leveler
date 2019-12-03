@@ -1,0 +1,46 @@
+﻿  PluginGUI.cpp
+  C74_GENPLUGIN.cpp
+  genlib.cpp
+  PluginProcessor.cpp
+  PluginEditor.cpp
+  include_juce_audio_basics.cpp
+  include_juce_audio_devices.cpp
+  include_juce_audio_formats.cpp
+  include_juce_audio_plugin_client_utils.cpp
+  include_juce_audio_processors.cpp
+  include_juce_core.cpp
+  include_juce_cryptography.cpp
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\C74_GENPLUGIN.h(25,10): fatal error C1083: Cannot open include file: 'genlib.h': No such file or directory (compiling source file ..\..\..\exported-code\C74_GENPLUGIN.cpp)
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(86,55): warning C4267: 'argument': conversion from 'size_t' to 'long', possible loss of data
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(93,25): warning C4267: 'return': conversion from 'size_t' to 't_ptr_size', possible loss of data
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(154,60): warning C4267: 'argument': conversion from 'size_t' to 't_ptr_size', possible loss of data
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(155,62): warning C4267: 'argument': conversion from 'size_t' to 't_ptr_size', possible loss of data
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(159,55): warning C4100: 'name': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(165,60): warning C4100: 'ref': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(170,56): warning C4100: 'b': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(175,62): warning C4100: 'valid': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(175,54): warning C4100: 'b': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(180,78): warning C4100: 'info': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(180,53): warning C4100: 'b': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(185,38): warning C4100: 'ref': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(190,43): warning C4100: 'b': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(195,59): warning C4100: 'b': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(199,49): warning C4100: 'b': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(209,52): warning C4100: 'ref': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(209,43): warning C4100: 'b': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(220,56): warning C4100: 'ref': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(303,42): warning C4267: 'argument': conversion from 'size_t' to 't_ptr_size', possible loss of data
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(386,34): warning C4100: 'data': unreferenced formal parameter
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(430,16): warning C4267: 'argument': conversion from 'size_t' to 't_ptr_size', possible loss of data
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(430,50): warning C4267: 'argument': conversion from 'size_t' to 't_ptr_size', possible loss of data
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(428,61): warning C4100: 'user_data': unreferenced formal parameter
+  include_juce_data_structures.cpp
+  include_juce_events.cpp
+  include_juce_graphics.cpp
+  include_juce_gui_basics.cpp
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\exported-code\gen_dsp\genlib.cpp(433,47): warning C4100: 'user_data': unreferenced formal parameter
+  include_juce_gui_extra.cpp
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\Source-Plugin\PluginProcessor.h(16,10): fatal error C1083: Cannot open include file: 'C74_GENPLUGIN.h': No such file or directory (compiling source file ..\..\..\Source-Plugin\PluginEditor.cpp)
+  include_juce_opengl.cpp
+  include_juce_video.cpp
+D:\Projects\Developer\auto-leveler\auto-leveler-JUCE-export\Source-Plugin\PluginProcessor.h(16,10): fatal error C1083: Cannot open include file: 'C74_GENPLUGIN.h': No such file or directory (compiling source file ..\..\..\Source-Plugin\PluginProcessor.cpp)
