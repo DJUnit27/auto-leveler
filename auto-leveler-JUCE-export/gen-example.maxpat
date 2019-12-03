@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 123.0, 102.0, 1054.0, 664.0 ],
+		"rect" : [ 86.0, 100.0, 1054.0, 664.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -60,7 +60,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 628.0, 24.0, 237.0, 47.0 ],
+					"patching_rect" : [ 628.0, 24.0, 237.0, 48.0 ],
 					"text" : "Bang this Button to read the Readme FIRST ! --->"
 				}
 
@@ -87,21 +87,21 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 947.0, 93.0, 131.0, 35.0 ],
-					"text" : ";\rmax launchbrowser $1"
+					"patching_rect" : [ 947.0, 93.0, 131.0, 36.0 ],
+					"text" : ";\r\nmax launchbrowser $1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-14",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 947.0, 22.0, 211.0, 62.0 ],
-					"text" : "\"file://Audio Internal:/Projects/Live/Unit27/Device Design/auto-leveler/gen-plugin-export-master 3/README.md\""
+					"patching_rect" : [ 947.0, 22.0, 211.0, 50.0 ],
+					"text" : "file://D:/Projects/Developer/auto-leveler/auto-leveler-JUCE-export/README.md"
 				}
 
 			}
@@ -113,7 +113,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 603.0, 249.0, 513.0, 127.0 ],
+					"patching_rect" : [ 603.0, 249.0, 513.0, 131.0 ],
 					"text" : "Plugin/Application type VST, VST3, AU or iOS (default: VST)\nPlugin/Application name, change this to set the name of your exported plugin\nBuild configuration (Debug/Release) (default: Debug)\nPlugin channel configuration {ins, outs} (default: {1,1}, {2,2})\n\na channelconf of \"{1, 1}, {2, 2}\" means that the plugin can handle mono in/out and stereo in/out\n\na channelconf of \"{2, 2}, {2, 4}, {4, 4}\" means that the plugin can handle stereo in/out, stereo in quad out and quad in/out"
 				}
 
@@ -280,7 +280,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 455.5, 150.0, 133.0, 35.0 ],
-									"text" : ";\rmax getsystem system"
+									"text" : ";\r\nmax getsystem system"
 								}
 
 							}
@@ -674,7 +674,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 370.0, 142.0, 554.0, 33.0 ],
+					"patching_rect" : [ 370.0, 142.0, 554.0, 34.0 ],
 					"text" : "name of the files to export - BE CAREFUL - renaming this will break the example, unless you rename the file references in the according Juce Introjucer projects"
 				}
 
@@ -701,7 +701,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 503.0, 393.0, 615.0, 370.0 ],
+					"patching_rect" : [ 503.0, 393.0, 615.0, 380.0 ],
 					"text" : "- the (yellow) gen~ project to your left holds the DSP code that will run in your plugin (at the moment just a simple Freeverb)\n\n- once you press export, the code is written to the \"exportfolder\" and a post export script is run\n\n-> this is the python script \"post-export.py\" \n\n- it will take the existing Jucer files, rewrite them according to your options and generate a project to build\n\n- on OS X it will try to automatically build the plugin, if this fails, please locate the Project file and build by hand via Xcode\n\n- on Windows it will try to open the Project file in Visual studio - if it fails, please locate and open it by hand\n\n- After the build is finished you can reload the plugin and try it out immediately - OS X ONLY\n\n--> due to file usage restrictions on Windows, you will have to close Max, build the plugin Project with Visual Studio, and reopen Max again, to be able to see the new plugin\n\n-> currently this will not generate a UI, but you can add one using the Juce framework, which this all relies on - the necessary Introjucer files are supplied\n\nfor generating an iOS App (Max OS X only), change the \"exportscriptargs\" to \"iOS\" and export, this will generate a Xcode project and open Xcode - press Cmd-R to build and run the project"
 				}
 
@@ -715,7 +715,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 24.0, 490.0, 33.0 ],
+					"patching_rect" : [ 15.0, 24.0, 490.0, 34.0 ],
 					"text" : "Creating a Plugin via Gen Code Export"
 				}
 
@@ -728,7 +728,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 503.0, 249.0, 101.0, 127.0 ],
+					"patching_rect" : [ 503.0, 249.0, 101.0, 131.0 ],
 					"text" : "--type   \n--name\n--configuration\n--channelconf\n\n\n\n\n"
 				}
 
@@ -763,7 +763,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 203.0, 264.0, 123.0, 26.0 ],
+					"patching_rect" : [ 203.0, 264.0, 123.0, 27.0 ],
 					"text" : "Reload Plugin",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -828,21 +828,21 @@
 								"selection" : [ 0.0, 1.0 ],
 								"loop" : 1,
 								"content_state" : 								{
-									"mode" : [ "basic" ],
-									"formant" : [ 1.0 ],
-									"pitchcorrection" : [ 0 ],
-									"quality" : [ "basic" ],
-									"followglobaltempo" : [ 0 ],
-									"speed" : [ 1.0 ],
-									"originallengthms" : [ 0.0 ],
-									"timestretch" : [ 0 ],
-									"formantcorrection" : [ 0 ],
-									"play" : [ 0 ],
-									"pitchshift" : [ 1.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"slurtime" : [ 0.0 ],
 									"originaltempo" : [ 120.0 ],
 									"basictuning" : [ 440 ],
+									"mode" : [ "basic" ],
+									"originallengthms" : [ 0.0 ],
+									"play" : [ 0 ],
+									"pitchcorrection" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"pitchshift" : [ 1.0 ],
+									"quality" : [ "basic" ],
+									"speed" : [ 1.0 ],
+									"timestretch" : [ 0 ],
+									"formantcorrection" : [ 0 ],
+									"slurtime" : [ 0.0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"formant" : [ 1.0 ],
 									"pitchshiftcent" : [ 0 ]
 								}
 
@@ -871,7 +871,7 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 15.0, 513.0, 387.5, 166.0 ],
+					"patching_rect" : [ 15.0, 513.0, 92.5, 22.0 ],
 					"save" : [ "#N", "vst~", "loaduniqueid", 0, ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -886,138 +886,6 @@
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 1,
 						"parameter_mappable" : 0
-					}
-,
-					"snapshot" : 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "snapshotlist",
-						"origin" : "vst~",
-						"type" : "list",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"pluginname" : "C74GenPlugin.vst",
-							"plugindisplayname" : "C74GenPlugin",
-							"pluginsavedname" : "/Volumes/Audio Internal/Projects/Live/Unit27/Device Design/auto-leveler/gen-plugin-export-master 3/build-results/VST/C74GenPlugin.vst",
-							"pluginsaveduniqueid" : 0,
-							"version" : 1,
-							"isbank" : 0,
-							"isbase64" : 1,
-							"sliderorder" : [  ],
-							"slidervisibility" : [ 1, 1, 1, 1 ],
-							"blob" : "115.CMlaKA....fQPMDZ....A.Ea0cF....Y....A.........................................vM6AhHjEVavIhNf.iK0vBHhXlXwHhNf.iK4vBHhXlXxHhNf.iK0vBHhLGbxUVXjIhNf.iKv.Re.."
-						}
-,
-						"snapshotlist" : 						{
-							"current_snapshot" : 0,
-							"entries" : [ 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "C74GenPlugin.vst",
-									"origin" : "C74GenPlugin.vst",
-									"type" : "VST",
-									"subtype" : "AudioEffect",
-									"embed" : 0,
-									"snapshot" : 									{
-										"pluginname" : "C74GenPlugin.vst",
-										"plugindisplayname" : "C74GenPlugin",
-										"pluginsavedname" : "/Volumes/Audio Internal/Projects/Live/Unit27/Device Design/auto-leveler/gen-plugin-export-master 3/build-results/VST/C74GenPlugin.vst",
-										"pluginsaveduniqueid" : 0,
-										"version" : 1,
-										"isbank" : 0,
-										"isbase64" : 1,
-										"sliderorder" : [  ],
-										"slidervisibility" : [ 1, 1, 1, 1 ],
-										"blob" : "115.CMlaKA....fQPMDZ....A.Ea0cF....Y....A.........................................vM6AhHjEVavIhNf.iK0vBHhXlXwHhNf.iK4vBHhXlXxHhNf.iK0vBHhLGbxUVXjIhNf.iKv.Re.."
-									}
-,
-									"fileref" : 									{
-										"name" : "C74GenPlugin.vst",
-										"filename" : "C74GenPlugin.vst_20191129.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "af7a6e62c0c407a8e5780fe30944bf64"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "C74GenPlugin.vst",
-									"origin" : "C74GenPlugin.vst",
-									"type" : "VST",
-									"subtype" : "AudioEffect",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "C74GenPlugin.vst",
-										"filename" : "C74GenPlugin.vst.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "77dfe126d8071a88e6b9710c8efdda9e"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "C74GenPlugin.vst",
-									"origin" : "C74GenPlugin.vst",
-									"type" : "VST",
-									"subtype" : "AudioEffect",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "C74GenPlugin.vst",
-										"filename" : "C74GenPlugin.vst_20191127.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "a645aa25e483c44003ecb2df16eb767e"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "C74GenPlugin.vst",
-									"origin" : "C74GenPlugin.vst",
-									"type" : "VST",
-									"subtype" : "AudioEffect",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "C74GenPlugin.vst",
-										"filename" : "C74GenPlugin.vst_20191128.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "c3975c8ba2ec594f466486598ef3d4a3"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "C74GenPlugin.vst",
-									"origin" : "C74GenPlugin.vst",
-									"type" : "VST",
-									"subtype" : "AudioEffect",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "C74GenPlugin.vst",
-										"filename" : "C74GenPlugin.vst_20191128_1.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "4a5252156321c4a8d98c6ba731b11805"
-									}
-
-								}
- ]
-						}
-
 					}
 ,
 					"text" : "vst~",
@@ -1044,7 +912,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 86.0, 91.0, 26.0 ],
+					"patching_rect" : [ 15.0, 86.0, 91.0, 27.0 ],
 					"text" : "exportcode"
 				}
 
@@ -1069,7 +937,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 123.0, 102.0, 1054.0, 664.0 ],
+						"rect" : [ 348.0, 106.0, 1054.0, 664.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1135,13 +1003,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-25",
-									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 511.0, 189.0, 154.0, 49.0 ],
-									"text" : "param @name targetLevel @min -70 @max 0 @default -20"
+									"patching_rect" : [ 511.0, 189.0, 327.0, 22.0 ],
+									"text" : "param @name targetLevel @min -30 @max 0 @default -20"
 								}
 
 							}
@@ -1163,7 +1030,7 @@
 										}
 ,
 										"classnamespace" : "dsp.gen",
-										"rect" : [ 123.0, 102.0, 1054.0, 664.0 ],
+										"rect" : [ 307.0, 237.0, 1054.0, 664.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1191,6 +1058,18 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-2",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "" ],
+													"patching_rect" : [ 43.5, 680.0, 47.0, 22.0 ],
+													"text" : "clip 0 1"
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"id" : "obj-74",
 													"maxclass" : "newobj",
@@ -1245,7 +1124,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 491.5, 363.0, 74.0, 49.0 ],
+													"patching_rect" : [ 491.5, 363.0, 74.0, 50.0 ],
 													"text" : "in 5 @comment loadbang"
 												}
 
@@ -1270,7 +1149,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 159.0, 20.0, 75.0, 49.0 ],
+													"patching_rect" : [ 159.0, 20.0, 75.0, 50.0 ],
 													"text" : "in 3 @comment targetLevel"
 												}
 
@@ -1342,7 +1221,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 133.0, 196.5, 150.0, 47.0 ],
+													"patching_rect" : [ 133.0, 196.5, 150.0, 48.0 ],
 													"text" : "Check for silence, stops Gain movevemt if input is silent"
 												}
 
@@ -1354,7 +1233,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 151.5, 433.0, 119.0, 74.0 ],
+													"patching_rect" : [ 151.5, 433.0, 119.0, 75.0 ],
 													"text" : "If signal LKFS is lower than Target, turn down gain, else turn up gain gradually"
 												}
 
@@ -1388,7 +1267,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 430.5, 131.0, 150.0, 47.0 ],
+													"patching_rect" : [ 430.5, 131.0, 150.0, 48.0 ],
 													"text" : "Reset to 0dB gradually if\noriginal signal is lower than target LKFS"
 												}
 
@@ -1866,7 +1745,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 201.0, 89.5, 200.0, 33.0 ],
+													"patching_rect" : [ 201.0, 89.5, 200.0, 34.0 ],
 													"text" : "Check original signal agains target to decide if it should be processed"
 												}
 
@@ -1890,7 +1769,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 510.5, 20.0, 73.0, 49.0 ],
+													"patching_rect" : [ 510.5, 20.0, 73.0, 50.0 ],
 													"text" : "in 2 @comment LKFSpre"
 												}
 
@@ -1903,7 +1782,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 40.5, 20.0, 75.0, 49.0 ],
+													"patching_rect" : [ 40.5, 20.0, 75.0, 50.0 ],
 													"text" : "in 1 @comment LKFSpost"
 												}
 
@@ -1970,8 +1849,8 @@
 , 											{
 												"patchline" : 												{
 													"color" : [ 0.094893842935562, 0.722609400749207, 0.08217541873455, 1.0 ],
-													"destination" : [ "obj-72", 0 ],
-													"midpoints" : [ 53.0, 654.0, 30.0, 654.0, 30.0, 696.0, 732.0, 696.0, 732.0, 660.0, 766.5, 660.0 ],
+													"destination" : [ "obj-2", 0 ],
+													"midpoints" : [ 53.0, 654.0, 53.0, 654.0 ],
 													"source" : [ "obj-16", 0 ]
 												}
 
@@ -2017,6 +1896,15 @@
 													"destination" : [ "obj-22", 1 ],
 													"midpoints" : [ 50.0, 465.0, 60.5, 465.0 ],
 													"source" : [ "obj-18", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"color" : [ 0.0, 1.0, 0.0, 1.0 ],
+													"destination" : [ "obj-72", 0 ],
+													"midpoints" : [ 53.0, 714.0, 744.0, 714.0, 744.0, 702.0, 766.5, 702.0 ],
+													"source" : [ "obj-2", 0 ]
 												}
 
 											}
@@ -2148,7 +2036,7 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-74", 0 ],
-													"midpoints" : [ 637.5, 414.0, 765.0, 414.0, 765.0, 606.0, 766.5, 606.0 ],
+													"midpoints" : [ 637.5, 414.0, 766.5, 414.0 ],
 													"order" : 0,
 													"source" : [ "obj-33", 0 ]
 												}
@@ -2500,7 +2388,7 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-73", 0 ],
-													"midpoints" : [ 766.5, 730.0, 766.5, 730.0 ],
+													"midpoints" : [ 766.5, 732.0, 766.5, 732.0 ],
 													"source" : [ "obj-72", 0 ]
 												}
 
@@ -2508,7 +2396,7 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-72", 2 ],
-													"midpoints" : [ 766.5, 694.0, 787.5, 694.0 ],
+													"midpoints" : [ 766.5, 702.0, 787.5, 702.0 ],
 													"order" : 0,
 													"source" : [ "obj-74", 0 ]
 												}
@@ -2517,7 +2405,7 @@
 , 											{
 												"patchline" : 												{
 													"destination" : [ "obj-72", 1 ],
-													"midpoints" : [ 766.5, 694.0, 777.0, 694.0 ],
+													"midpoints" : [ 766.5, 699.0, 777.0, 699.0 ],
 													"order" : 1,
 													"source" : [ "obj-74", 0 ]
 												}
@@ -2527,7 +2415,7 @@
 												"patchline" : 												{
 													"color" : [ 0.692112028598785, 0.0, 0.033769007772207, 1.0 ],
 													"destination" : [ "obj-74", 1 ],
-													"midpoints" : [ 427.0, 651.0, 732.0, 651.0, 732.0, 606.0, 870.5, 606.0 ],
+													"midpoints" : [ 427.0, 649.0, 870.5, 649.0 ],
 													"source" : [ "obj-9", 0 ]
 												}
 
@@ -2535,7 +2423,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 489.0, 284.0, 119.0, 22.0 ],
+									"patching_rect" : [ 485.0, 279.0, 119.0, 22.0 ],
 									"text" : "gen autoGainControl"
 								}
 
@@ -3261,7 +3149,7 @@
 																"box" : 																{
 																	"code" : "cf = in1;\r\ngain = in2;\r\nQ = in3;\r\n\r\nomega = cf * twopi/samplerate;\nsn = sin(omega);\ncs = cos(omega);\r\nA = sqrt(gain); \r\nbeta  = sqrt((A*A + 1.)/Q - (A-1.)*(A-1.));\nb0 = 1./((A+1.) - (A-1.)*cs + beta*sn);\n\na0 = (A * ((A+1.) + (A-1.)*cs + beta*sn)) * b0;\na1 = (-2. * A * ((A-1.) + (A+1.)*cs)) * b0;\na2 = (A * ((A+1.) + (A-1.)*cs - beta*sn)) * b0;\nb1 = (2. * ((A-1.) - (A+1.)*cs)) * b0;\nb2 = ((A+1.) - (A-1.)*cs - beta*sn) * b0;\n\r\nout1 = a0;\r\nout2 = a1;\r\nout3 = a2;\r\nout4 = b1;\r\nout5 = b2;",
 																	"fontface" : 0,
-																	"fontname" : "Menlo",
+																	"fontname" : "Lucida Console",
 																	"fontsize" : 12.0,
 																	"id" : "obj-30",
 																	"maxclass" : "codebox",
@@ -6535,7 +6423,7 @@
 																"box" : 																{
 																	"code" : "cf = in1;\r\ngain = in2;\r\nQ = in3;\r\n\r\nomega = cf * twopi/samplerate;\nsn = sin(omega);\ncs = cos(omega);\r\nA = sqrt(gain); \r\nbeta  = sqrt((A*A + 1.)/Q - (A-1.)*(A-1.));\nb0 = 1./((A+1.) - (A-1.)*cs + beta*sn);\n\na0 = (A * ((A+1.) + (A-1.)*cs + beta*sn)) * b0;\na1 = (-2. * A * ((A-1.) + (A+1.)*cs)) * b0;\na2 = (A * ((A+1.) + (A-1.)*cs - beta*sn)) * b0;\nb1 = (2. * ((A-1.) - (A+1.)*cs)) * b0;\nb2 = ((A+1.) - (A-1.)*cs - beta*sn) * b0;\n\r\nout1 = a0;\r\nout2 = a1;\r\nout3 = a2;\r\nout4 = b1;\r\nout5 = b2;",
 																	"fontface" : 0,
-																	"fontname" : "Menlo",
+																	"fontname" : "Lucida Console",
 																	"fontsize" : 12.0,
 																	"id" : "obj-30",
 																	"maxclass" : "codebox",
@@ -9142,7 +9030,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 65.0, 29.0, 73.0, 49.0 ],
+									"patching_rect" : [ 65.0, 29.0, 73.0, 50.0 ],
 									"text" : "in 1 @comment L In"
 								}
 
@@ -9155,7 +9043,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 153.0, 29.0, 73.0, 49.0 ],
+									"patching_rect" : [ 153.0, 29.0, 73.0, 50.0 ],
 									"text" : "in 2 @comment L In"
 								}
 
@@ -9229,7 +9117,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 0 ],
-									"midpoints" : [ 259.5, 270.0, 498.5, 270.0 ],
+									"midpoints" : [ 259.5, 270.0, 494.5, 270.0 ],
 									"source" : [ "obj-19", 0 ]
 								}
 
@@ -9255,7 +9143,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 1 ],
-									"midpoints" : [ 378.5, 270.0, 523.5, 270.0 ],
+									"midpoints" : [ 378.5, 270.0, 519.5, 270.0 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -9264,7 +9152,7 @@
 								"patchline" : 								{
 									"color" : [ 0.012558881193399, 0.201860666275024, 0.700787901878357, 1.0 ],
 									"destination" : [ "obj-34", 0 ],
-									"midpoints" : [ 498.5, 309.0, 462.0, 309.0, 462.0, 42.0, 328.5, 42.0 ],
+									"midpoints" : [ 494.5, 309.0, 462.0, 309.0, 462.0, 42.0, 328.5, 42.0 ],
 									"source" : [ "obj-23", 0 ]
 								}
 
@@ -9272,7 +9160,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 2 ],
-									"midpoints" : [ 520.5, 270.0, 548.5, 270.0 ],
+									"midpoints" : [ 520.5, 270.0, 544.5, 270.0 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -9298,7 +9186,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 3 ],
-									"midpoints" : [ 328.5, 150.0, 498.0, 150.0, 498.0, 270.0, 573.5, 270.0 ],
+									"midpoints" : [ 328.5, 150.0, 498.0, 150.0, 498.0, 270.0, 569.5, 270.0 ],
 									"order" : 0,
 									"source" : [ "obj-34", 0 ]
 								}
@@ -9315,7 +9203,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 4 ],
-									"midpoints" : [ 743.0, 270.0, 598.5, 270.0 ],
+									"midpoints" : [ 743.0, 270.0, 594.5, 270.0 ],
 									"source" : [ "obj-41", 0 ]
 								}
 
@@ -9324,12 +9212,11 @@
 						"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 15.0, 384.0, 102.0, 24.0 ],
+					"patching_rect" : [ 15.0, 384.0, 102.0, 25.0 ],
 					"saved_object_attributes" : 					{
 						"autoexport" : 0,
-						"exportfolder" : "Audio Internal:/Projects/Live/Unit27/Device Design/auto-leveler/gen-plugin-export-master 3/exported-code/",
 						"exportname" : "C74_GENPLUGIN",
-						"exportscript" : "Audio Internal:/Projects/Live/Unit27/Device Design/auto-leveler/gen-plugin-export-master 3/post-export.py",
+						"exportscript" : "D:/Projects/Developer/auto-leveler/auto-leveler-JUCE-export/post-export.py",
 						"exportscriptargs" : "--type VST --name C74GenPlugin --channelconf \"{1,1}, {2,2}\" --configuration Debug"
 					}
 ,
@@ -9560,41 +9447,6 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "C74GenPlugin.vst_20191129.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../../Users/unit27/Documents/Max 8/Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "C74GenPlugin.vst.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../../Users/unit27/Documents/Max 8/Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "C74GenPlugin.vst_20191127.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../../Users/unit27/Documents/Max 8/Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "C74GenPlugin.vst_20191128.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../../Users/unit27/Documents/Max 8/Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "C74GenPlugin.vst_20191128_1.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../../../../../../Users/unit27/Documents/Max 8/Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "drumLoop.aif",
 				"bootpath" : "C74:/media/msp",
 				"type" : "AIFF",
