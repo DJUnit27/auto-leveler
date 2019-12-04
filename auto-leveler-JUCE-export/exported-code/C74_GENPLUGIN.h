@@ -22,9 +22,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 *******************************************************************************************************************/
 
 
-#include "genlib.h"
-#include "genlib_exportfunctions.h"
-#include "genlib_ops.h"
+#include "gen_dsp/genlib.h"
+#include "gen_dsp/genlib_exportfunctions.h"
+#include "gen_dsp/genlib_ops.h"
 
 namespace C74_GENPLUGIN {
 
