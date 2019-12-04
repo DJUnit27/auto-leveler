@@ -2,14 +2,13 @@
 
 <JUCERPROJECT aaxIdentifier="com.cycling74.C74GenPlugin" buildAAX="0" buildAU="0"
               buildRTAS="0" buildVST="1" buildVST3="0" bundleIdentifier="com.cycling74.C74GenPlugin"
-              id="TNkzSt" includeBinaryInAppConfig="1" jucerVersion="3.2.0"
-              name="C74GenPlugin" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
-              pluginAUExportPrefix="C74GenPluginAU" pluginChannelConfigs="{1,1}, {2,2}"
-              pluginCode="Plug" pluginDesc="" pluginEditorRequiresKeys="0"
-              pluginIsSynth="0" pluginManufacturer="c74" pluginManufacturerCode="CY74"
-              pluginName="C74GenPlugin" pluginProducesMidiOut="0" pluginRTASCategory=""
-              pluginSilenceInIsSilenceOut="0" pluginWantsMidiIn="0" projectType="audioplug"
-              version="1.0.0">
+              id="TNkzSt" includeBinaryInAppConfig="1" jucerVersion="5.4.5"
+              name="C74GenPlugin" pluginAAXCategory="2" pluginAUExportPrefix="C74GenPluginAU"
+              pluginChannelConfigs="{1,1}, {2,2}" pluginCode="Plug" pluginDesc=""
+              pluginEditorRequiresKeys="0" pluginIsSynth="0" pluginManufacturer="c74"
+              pluginManufacturerCode="CY74" pluginName="C74GenPlugin" pluginProducesMidiOut="0"
+              pluginRTASCategory="" pluginSilenceInIsSilenceOut="0" pluginWantsMidiIn="0"
+              projectType="audioplug" version="1.0.0" pluginFormats="buildVST">
   <MAINGROUP id="j0DzSh" name="C74GenPlugin">
     <GROUP id="{F0566F66-1E06-0640-9035-6D16F5EC007D}" name="Source">
       <GROUP id="{D858CDE4-A7B1-9228-042D-12B84C8895C0}" name="exported-code">
@@ -43,11 +42,11 @@
         <CONFIGURATION customXcodeFlags="&#9;&#9;&#9;&#9;OTHER_REZFLAGS = &quot;-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $(PROJECT_DIR)/../../../CoreAudioUtilityClasses/CoreAudio/AudioUnits/AUPublic/AUBase&quot; "
                        headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"
                        isDebug="1" name="Debug" optimisation="1" osxArchitecture="64BitUniversal"
-                       osxCompatibility="default" osxSDK="default" targetName="C74GenPlugin"/>
+                       targetName="C74GenPlugin"/>
         <CONFIGURATION customXcodeFlags="&#9;&#9;&#9;&#9;OTHER_REZFLAGS = &quot;-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $(PROJECT_DIR)/../../../CoreAudioUtilityClasses/CoreAudio/AudioUnits/AUPublic/AUBase&quot; "
                        headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"
                        isDebug="0" name="Release" optimisation="2" osxArchitecture="64BitUniversal"
-                       osxCompatibility="default" osxSDK="default" targetName="C74GenPlugin"/>
+                       targetName="C74GenPlugin"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../JUCE/modules"/>
@@ -92,6 +91,28 @@
         <MODULEPATH id="juce_audio_basics" path="..\JUCE\modules"/>
       </MODULEPATHS>
     </VS2013>
+    <VS2019 targetFolder="../VST-Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../../juce"/>
+        <MODULEPATH id="juce_opengl" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_cryptography" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+      </MODULEPATHS>
+    </VS2019>
   </EXPORTFORMATS>
   <MODULES>
     <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
@@ -110,4 +131,7 @@
     <MODULES id="juce_video" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>
