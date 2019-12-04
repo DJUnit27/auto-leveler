@@ -11,6 +11,8 @@
               projectType="audioplug" version="1.0.0" pluginFormats="buildVST">
   <MAINGROUP id="j0DzSh" name="C74GenPlugin">
     <GROUP id="{F0566F66-1E06-0640-9035-6D16F5EC007D}" name="Source">
+      <FILE id="ZBzt2i" name="GUI.cpp" compile="1" resource="0" file="../Source-Plugin/GUI.cpp"/>
+      <FILE id="UnvMKZ" name="GUI.h" compile="0" resource="0" file="../Source-Plugin/GUI.h"/>
       <GROUP id="{D858CDE4-A7B1-9228-042D-12B84C8895C0}" name="exported-code">
         <FILE compile="0" file="../exported-code/C74_GENPLUGIN.h" id="c1pCx7"
               name="C74_GENPLUGIN.h" resource="0"/>

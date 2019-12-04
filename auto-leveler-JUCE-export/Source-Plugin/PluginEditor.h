@@ -13,12 +13,13 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
+#include "GUI.h"
 
 
 //==============================================================================
 /**
 */
-class C74GenAudioProcessorEditor  : public AudioProcessorEditor
+class C74GenAudioProcessorEditor  : public AudioProcessorEditor, Slider::Listener
 {
 public:
     C74GenAudioProcessorEditor (C74GenAudioProcessor&);
@@ -27,11 +28,22 @@ public:
     //==============================================================================
     void paint (Graphics&) override;
     void resized() override;
+    void sliderValueChanged(Slider* sliderThatWasMoved) override;
 
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     C74GenAudioProcessor& processor;
+
+    //[UserVariables]   -- You can add your own custom variables in this section.
+    //[/UserVariables]
+
+    //==============================================================================
+    std::unique_ptr<Slider> target;
+    std::unique_ptr<Label> targetLabel;
+
+
+    //==============================================================================
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (C74GenAudioProcessorEditor)
 };

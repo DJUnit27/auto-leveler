@@ -16,27 +16,88 @@
 C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
-    // Make sure that before the constructor has finished, you've set the
-    // editor's size to whatever you need it to be.
-    setSize (400, 300);
+    //[Constructor_pre] You can add your own custom stuff here..
+    //[/Constructor_pre]
+
+    target.reset(new Slider("target"));
+    addAndMakeVisible(target.get());
+    target->setRange(-30, 0, 0.01);
+    target->setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
+    target->setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
+    target->addListener(this);
+
+    target->setBounds(0, 48, 216, 144);
+
+    targetLabel.reset(new Label("targetLabel",
+        TRANS("Target")));
+    addAndMakeVisible(targetLabel.get());
+    targetLabel->setFont(Font(15.00f, Font::plain).withTypefaceStyle("Regular"));
+    targetLabel->setJustificationType(Justification::centred);
+    targetLabel->setEditable(false, false, false);
+    targetLabel->setColour(TextEditor::textColourId, Colours::black);
+    targetLabel->setColour(TextEditor::backgroundColourId, Colour(0x00000000));
+
+    targetLabel->setBounds(0, 16, 216, 24);
+
+
+    //[UserPreSize]
+    //[/UserPreSize]
+
+    setSize(600, 400);
+
+
+    //[Constructor] You can add your own custom stuff here..
+    //[/Constructor]
 }
 
 C74GenAudioProcessorEditor::~C74GenAudioProcessorEditor()
 {
+    //[Destructor_pre]. You can add your own custom destruction code here..
+    //[/Destructor_pre]
+
+    target = nullptr;
+    targetLabel = nullptr;
+
+
+    //[Destructor]. You can add your own custom destruction code here..
+    //[/Destructor]
 }
 
 //==============================================================================
 void C74GenAudioProcessorEditor::paint (Graphics& g)
 {
-    g.fillAll (Colours::white);
+    //[UserPrePaint] Add your own custom painting code here..
+    //[/UserPrePaint]
 
-    g.setColour (Colours::black);
-    g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), Justification::centred, 1);
+    g.fillAll(Colour(0xff323e44));
+
+    //[UserPaint] Add your own custom painting code here..
+    //[/UserPaint]
 }
 
 void C74GenAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+    //[UserPreResize] Add your own custom resize code here..
+    //[/UserPreResize]
+
+    //[UserResized] Add your own custom resize handling here..
+    //[/UserResized]
+}
+
+void C74GenAudioProcessorEditor::sliderValueChanged(Slider* sliderThatWasMoved)
+{
+    //[UsersliderValueChanged_Pre]
+    //[/UsersliderValueChanged_Pre]
+
+    if (sliderThatWasMoved == target.get())
+    {
+        if (sliderThatWasMoved == target)
+        {
+            sliderThatWasMoved->getValue();
+            processor.setParameter(0, sliderThatWasMoved->getValue());
+        }
+    }
+
+    //[UsersliderValueChanged_Post]
+    //[/UsersliderValueChanged_Post]
 }
