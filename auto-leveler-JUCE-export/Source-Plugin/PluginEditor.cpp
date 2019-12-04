@@ -17,15 +17,16 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
 
-    setSize(150, 150);
+    setSize(200, 200);
 
     // These define the parameter of our slider object
     targetSlider.setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
     targetSlider.setRange(0.0, 1.0, 0.01);
     targetSlider.setTextBoxStyle(Slider::TextBoxBelow, false, 90, 12);
-    targetSlider.setPopupDisplayEnabled(true, true, this);
+    targetSlider.setPopupDisplayEnabled(false, false, this);
     // targetSlider.setTextValueSuffix(" LKFS");
-    targetSlider.setValue(-0.53333);
+    targetSlider.setValue(0.46);
+    targetSlider.setDoubleClickReturnValue(true, 0.46);
 
     // this function adds the slider to the editor
     addAndMakeVisible(&targetSlider);
@@ -53,7 +54,7 @@ void C74GenAudioProcessorEditor::paint (Graphics& g)
 void C74GenAudioProcessorEditor::resized()
 {
     // sets the position and size of the slider with arguments (x, y, width, height)
-    targetSlider.setBounds(30, 30, getWidth() - 30, getHeight() - 30);
+    targetSlider.setBounds(30, 30, 140, getHeight() - 60);
 }
 
 void C74GenAudioProcessorEditor::sliderValueChanged(Slider* slider)
