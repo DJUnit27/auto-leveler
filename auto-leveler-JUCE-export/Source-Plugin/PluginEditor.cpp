@@ -54,7 +54,7 @@ void C74GenAudioProcessorEditor::paint (Graphics& g)
 void C74GenAudioProcessorEditor::resized()
 {
     // sets the position and size of the slider with arguments (x, y, width, height)
-    targetSlider.setBounds(30, 30, 140, getHeight() - 60);
+    targetSlider.setBounds(20, 20, 160, getHeight() - 60);
 }
 
 void C74GenAudioProcessorEditor::sliderValueChanged(Slider* slider)
