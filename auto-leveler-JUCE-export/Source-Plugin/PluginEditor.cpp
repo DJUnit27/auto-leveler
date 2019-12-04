@@ -21,7 +21,7 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
 
     targetLevel.reset(new Slider("targetLevel"));
     addAndMakeVisible(targetLevel.get());
-    targetLevel->setRange(-40, 0, 0.01);
+    targetLevel->setRange(-30, 0, 0.01);
     targetLevel->setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
     targetLevel->setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
     targetLevel->addListener(this);
