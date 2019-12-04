@@ -218,8 +218,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 85.0, 529.0, 293.0, 22.0 ],
-									"text" : "sprintf symout %sbuild-results/VST/C74GenPlugin.dll"
+									"patching_rect" : [ 85.0, 529.0, 277.0, 22.0 ],
+									"text" : "sprintf symout %sbuild-results/VST/AutoLeveler.dll"
 								}
 
 							}
@@ -279,7 +279,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 455.5, 150.0, 133.0, 35.0 ],
+									"patching_rect" : [ 455.5, 150.0, 133.0, 36.0 ],
 									"text" : ";\r\nmax getsystem system"
 								}
 
@@ -291,7 +291,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 424.0, 40.0, 216.0, 33.0 ],
+									"patching_rect" : [ 424.0, 40.0, 216.0, 34.0 ],
 									"text" : "this is all just for finding our assets relative to the currently open patcher"
 								}
 
@@ -315,8 +315,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 495.0, 297.0, 22.0 ],
-									"text" : "sprintf symout %sbuild-results/VST/C74GenPlugin.vst"
+									"patching_rect" : [ 50.0, 495.0, 280.0, 22.0 ],
+									"text" : "sprintf symout %sbuild-results/VST/AutoLeveler.vst"
 								}
 
 							}
@@ -828,21 +828,21 @@
 								"selection" : [ 0.0, 1.0 ],
 								"loop" : 1,
 								"content_state" : 								{
+									"quality" : [ "basic" ],
+									"originallength" : [ 0.0, "ticks" ],
+									"mode" : [ "basic" ],
+									"slurtime" : [ 0.0 ],
 									"originaltempo" : [ 120.0 ],
 									"basictuning" : [ 440 ],
-									"mode" : [ "basic" ],
-									"pitchshift" : [ 1.0 ],
+									"formant" : [ 1.0 ],
+									"play" : [ 0 ],
 									"pitchcorrection" : [ 0 ],
 									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
 									"speed" : [ 1.0 ],
-									"quality" : [ "basic" ],
-									"slurtime" : [ 0.0 ],
 									"timestretch" : [ 0 ],
 									"formantcorrection" : [ 0 ],
-									"play" : [ 0 ],
-									"formant" : [ 1.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"originallengthms" : [ 0.0 ],
+									"pitchshift" : [ 1.0 ],
 									"pitchshiftcent" : [ 0 ]
 								}
 
@@ -871,7 +871,7 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 15.0, 513.0, 92.5, 22.0 ],
+					"patching_rect" : [ 15.0, 513.0, 342.0, 97.0 ],
 					"save" : [ "#N", "vst~", "loaduniqueid", 0, ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -898,41 +898,50 @@
 						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
-							"pluginname" : "C74GenPlugin.vst",
-							"plugindisplayname" : "C74GenPlugin",
-							"pluginsavedname" : "Macintosh HD:/Users/stb/dev/cycling74/gen-plugin-export/build-results/VST/C74GenPlugin.vst",
+							"pluginname" : "AutoLeveler.vstinfo",
+							"plugindisplayname" : "AutoLeveler",
+							"pluginsavedname" : "D:/Projects/Developer/auto-leveler/auto-leveler-JUCE-export/build-results/VST/AutoLeveler.dll",
 							"pluginsaveduniqueid" : 0,
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"sliderorder" : [ 0, 1, 2, 3 ],
-							"slidervisibility" : [ 1, 1, 1, 1 ],
-							"blob" : "115.CMlaKA....fQPMDZ....A.Ea0cF....Y....A.........................................vM6AhHjEVavIhNf.iK0vBHhXlXwHhNf.iK4vBHhXlXxHhNf.iK0vBHhLGbxUVXjIhNf.iKv.Re.."
+							"sliderorder" : [  ],
+							"slidervisibility" : [ 1 ],
+							"blob" : "85.CMlaKA....fQPMDZ....A.Ea0cF.A.......A.........................................PF6AhHzElbmUFcLUlckwlH5.RKwPiKv.Re.."
 						}
 ,
 						"snapshotlist" : 						{
 							"current_snapshot" : 0,
 							"entries" : [ 								{
 									"filetype" : "C74Snapshot",
-									"version" : 1,
+									"version" : 2,
+									"minorversion" : 0,
 									"name" : "C74GenPlugin.vst",
-									"origin" : "C74GenPlugin.vst",
+									"origin" : "AutoLeveler.vstinfo",
 									"type" : "VST",
 									"subtype" : "AudioEffect",
+									"embed" : 0,
 									"snapshot" : 									{
-										"pluginname" : "C74GenPlugin.vst",
-										"plugindisplayname" : "C74GenPlugin",
-										"pluginsavedname" : "Macintosh HD:/Users/stb/dev/cycling74/gen-plugin-export/build-results/VST/C74GenPlugin.vst",
+										"pluginname" : "AutoLeveler.vstinfo",
+										"plugindisplayname" : "AutoLeveler",
+										"pluginsavedname" : "D:/Projects/Developer/auto-leveler/auto-leveler-JUCE-export/build-results/VST/AutoLeveler.dll",
 										"pluginsaveduniqueid" : 0,
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"sliderorder" : [ 0, 1, 2, 3 ],
-										"slidervisibility" : [ 1, 1, 1, 1 ],
-										"blob" : "115.CMlaKA....fQPMDZ....A.Ea0cF....Y....A.........................................vM6AhHjEVavIhNf.iK0vBHhXlXwHhNf.iK4vBHhXlXxHhNf.iK0vBHhLGbxUVXjIhNf.iKv.Re.."
+										"sliderorder" : [  ],
+										"slidervisibility" : [ 1 ],
+										"blob" : "85.CMlaKA....fQPMDZ....A.Ea0cF.A.......A.........................................PF6AhHzElbmUFcLUlckwlH5.RKwPiKv.Re.."
 									}
 ,
-									"embed" : 0
+									"fileref" : 									{
+										"name" : "C74GenPlugin.vst",
+										"filename" : "C74GenPlugin.vst.maxsnap",
+										"filepath" : "~/Documents/Max 8/Snapshots",
+										"filepos" : -1,
+										"snapshotfileid" : "33c65c6145067921da46bbe1a8d8e0ba"
+									}
+
 								}
  ]
 						}
@@ -9520,6 +9529,12 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "C74GenPlugin.vst.maxsnap",
+				"bootpath" : "~/Documents/Max 8/Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "drumLoop.aif",
 				"bootpath" : "C74:/media/msp",
 				"type" : "AIFF",
