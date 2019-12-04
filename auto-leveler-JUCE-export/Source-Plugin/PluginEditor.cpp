@@ -19,14 +19,14 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     //[Constructor_pre] You can add your own custom stuff here..
     //[/Constructor_pre]
 
-    target.reset(new Slider("target"));
-    addAndMakeVisible(target.get());
-    target->setRange(-30, 0, 0.01);
-    target->setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
-    target->setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
-    target->addListener(this);
+    targetLevel.reset(new Slider("targetLevel"));
+    addAndMakeVisible(targetLevel.get());
+    targetLevel->setRange(-40, 0, 0.01);
+    targetLevel->setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
+    targetLevel->setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
+    targetLevel->addListener(this);
 
-    target->setBounds(0, 48, 216, 144);
+    targetLevel->setBounds(0, 48, 216, 144);
 
     targetLabel.reset(new Label("targetLabel",
         TRANS("Target")));
@@ -55,7 +55,7 @@ C74GenAudioProcessorEditor::~C74GenAudioProcessorEditor()
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
 
-    target = nullptr;
+    targetLevel = nullptr;
     targetLabel = nullptr;
 
 
@@ -89,15 +89,14 @@ void C74GenAudioProcessorEditor::sliderValueChanged(Slider* sliderThatWasMoved)
     //[UsersliderValueChanged_Pre]
     //[/UsersliderValueChanged_Pre]
 
-    if (sliderThatWasMoved == target.get())
+    if (sliderThatWasMoved == targetLevel.get())
     {
-        if (sliderThatWasMoved == target)
-        {
-            sliderThatWasMoved->getValue();
-            processor.setParameter(0, sliderThatWasMoved->getValue());
-        }
+        sliderThatWasMoved->getValue();
+        processor.setParameter(0, sliderThatWasMoved->getValue());
     }
 
     //[UsersliderValueChanged_Post]
     //[/UsersliderValueChanged_Post]
 }
+
+

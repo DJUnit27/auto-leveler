@@ -56,7 +56,7 @@ private:
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<Slider> target;
+    std::unique_ptr<Slider> targetLevel;
     std::unique_ptr<Label> targetLabel;
 
 

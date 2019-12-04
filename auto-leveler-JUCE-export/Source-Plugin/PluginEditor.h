@@ -13,7 +13,6 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
-#include "GUI.h"
 
 
 //==============================================================================
@@ -39,7 +38,7 @@ private:
     //[/UserVariables]
 
     //==============================================================================
-    std::unique_ptr<Slider> target;
+    std::unique_ptr<Slider> targetLevel;
     std::unique_ptr<Label> targetLabel;
 
 
