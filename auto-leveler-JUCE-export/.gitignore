@@ -4,7 +4,6 @@
 /AU-Builds/**
 /App-Builds/**
 /build-results/**
-/exported-code/**
 /Introjucer/tmp*.jucer
 /Introjucer/JuceLibraryCode/**
 
