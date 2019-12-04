@@ -21,6 +21,7 @@
 class C74GenAudioProcessor  : public AudioProcessor
 {
 public:
+
     //==============================================================================
     C74GenAudioProcessor();
     ~C74GenAudioProcessor();
