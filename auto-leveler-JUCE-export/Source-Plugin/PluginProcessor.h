@@ -13,7 +13,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
-#include "C74_GENPLUGIN.h"
+#include "../exported-code/C74_GENPLUGIN.h"
 
 //==============================================================================
 /**

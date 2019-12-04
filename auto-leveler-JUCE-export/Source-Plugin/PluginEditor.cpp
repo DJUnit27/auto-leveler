@@ -19,22 +19,31 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     //[Constructor_pre] You can add your own custom stuff here..
     //[/Constructor_pre]
 
-    targetlabel.reset (new Label ("targetlabel",
-                                  TRANS("Target: 20 LKFS")));
-    addAndMakeVisible (targetlabel.get());
-    targetlabel->setFont (Font (15.00f, Font::plain).withTypefaceStyle ("Regular"));
-    targetlabel->setJustificationType (Justification::centred);
-    targetlabel->setEditable (false, false, false);
-    targetlabel->setColour (TextEditor::textColourId, Colours::black);
-    targetlabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
+    targetLevel.reset(new Slider("targetLevel"));
+    addAndMakeVisible(targetLevel.get());
+    targetLevel->setRange(-40, 0, 0.01);
+    targetLevel->setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
+    targetLevel->setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
+    targetLevel->addListener(this);
 
-    targetlabel->setBounds (20, 75, 180, 24);
+    targetLevel->setBounds(0, 48, 216, 144);
+
+    targetLabel.reset(new Label("targetLabel",
+        TRANS("Target")));
+    addAndMakeVisible(targetLabel.get());
+    targetLabel->setFont(Font(15.00f, Font::plain).withTypefaceStyle("Regular"));
+    targetLabel->setJustificationType(Justification::centred);
+    targetLabel->setEditable(false, false, false);
+    targetLabel->setColour(TextEditor::textColourId, Colours::black);
+    targetLabel->setColour(TextEditor::backgroundColourId, Colour(0x00000000));
+
+    targetLabel->setBounds(0, 16, 216, 24);
 
 
     //[UserPreSize]
     //[/UserPreSize]
 
-    setSize (220, 150);
+    setSize(600, 400);
 
 
     //[Constructor] You can add your own custom stuff here..
@@ -46,7 +55,8 @@ C74GenAudioProcessorEditor::~C74GenAudioProcessorEditor()
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
 
-    targetlabel = nullptr;
+    targetLevel = nullptr;
+    targetLabel = nullptr;
 
 
     //[Destructor]. You can add your own custom destruction code here..
@@ -59,7 +69,7 @@ void C74GenAudioProcessorEditor::paint (Graphics& g)
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
 
-    g.fillAll (Colour (0xff323e44));
+    g.fillAll(Colour(0xff323e44));
 
     //[UserPaint] Add your own custom painting code here..
     //[/UserPaint]
@@ -67,6 +77,26 @@ void C74GenAudioProcessorEditor::paint (Graphics& g)
 
 void C74GenAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+    //[UserPreResize] Add your own custom resize code here..
+    //[/UserPreResize]
+
+    //[UserResized] Add your own custom resize handling here..
+    //[/UserResized]
 }
+
+void C74GenAudioProcessorEditor::sliderValueChanged(Slider* sliderThatWasMoved)
+{
+    //[UsersliderValueChanged_Pre]
+    //[/UsersliderValueChanged_Pre]
+
+    if (sliderThatWasMoved == targetLevel.get())
+    {
+        sliderThatWasMoved->getValue();
+        processor.setParameter(0, sliderThatWasMoved->getValue());
+    }
+
+    //[UsersliderValueChanged_Post]
+    //[/UsersliderValueChanged_Post]
+}
+
+
