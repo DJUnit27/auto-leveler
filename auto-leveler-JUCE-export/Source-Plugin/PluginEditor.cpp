@@ -16,51 +16,26 @@
 C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
-    //[Constructor_pre] You can add your own custom stuff here..
-    //[/Constructor_pre]
 
-    targetLevel.reset(new Slider("targetLevel"));
-    addAndMakeVisible(targetLevel.get());
-    targetLevel->setRange(-40, 0, 0.01);
-    targetLevel->setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
-    targetLevel->setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
-    targetLevel->addListener(this);
+    setSize(150, 150);
 
-    targetLevel->setBounds(0, 48, 216, 144);
+    // These define the parameter of our slider object
+    targetSlider.setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
+    targetSlider.setRange(0.0, 1.0, 0.01);
+    targetSlider.setTextBoxStyle(Slider::TextBoxBelow, false, 90, 12);
+    targetSlider.setPopupDisplayEnabled(true, true, this);
+    // targetSlider.setTextValueSuffix(" LKFS");
+    targetSlider.setValue(-0.53333);
 
-    targetLabel.reset(new Label("targetLabel",
-        TRANS("Target")));
-    addAndMakeVisible(targetLabel.get());
-    targetLabel->setFont(Font(15.00f, Font::plain).withTypefaceStyle("Regular"));
-    targetLabel->setJustificationType(Justification::centred);
-    targetLabel->setEditable(false, false, false);
-    targetLabel->setColour(TextEditor::textColourId, Colours::black);
-    targetLabel->setColour(TextEditor::backgroundColourId, Colour(0x00000000));
+    // this function adds the slider to the editor
+    addAndMakeVisible(&targetSlider);
 
-    targetLabel->setBounds(0, 16, 216, 24);
-
-
-    //[UserPreSize]
-    //[/UserPreSize]
-
-    setSize(600, 400);
-
-
-    //[Constructor] You can add your own custom stuff here..
-    //[/Constructor]
+    // add the listener to the slider
+    targetSlider.addListener(this);
 }
 
 C74GenAudioProcessorEditor::~C74GenAudioProcessorEditor()
 {
-    //[Destructor_pre]. You can add your own custom destruction code here..
-    //[/Destructor_pre]
-
-    targetLevel = nullptr;
-    targetLabel = nullptr;
-
-
-    //[Destructor]. You can add your own custom destruction code here..
-    //[/Destructor]
 }
 
 //==============================================================================
@@ -77,26 +52,14 @@ void C74GenAudioProcessorEditor::paint (Graphics& g)
 
 void C74GenAudioProcessorEditor::resized()
 {
-    //[UserPreResize] Add your own custom resize code here..
-    //[/UserPreResize]
-
-    //[UserResized] Add your own custom resize handling here..
-    //[/UserResized]
+    // sets the position and size of the slider with arguments (x, y, width, height)
+    targetSlider.setBounds(30, 30, getWidth() - 30, getHeight() - 30);
 }
 
-void C74GenAudioProcessorEditor::sliderValueChanged(Slider* sliderThatWasMoved)
+void C74GenAudioProcessorEditor::sliderValueChanged(Slider* slider)
 {
-    //[UsersliderValueChanged_Pre]
-    //[/UsersliderValueChanged_Pre]
-
-    if (sliderThatWasMoved == targetLevel.get())
+    if (slider->getName() == targetSlider.getName())
     {
-        sliderThatWasMoved->getValue();
-        processor.setParameter(0, sliderThatWasMoved->getValue());
+        processor.setParameter(0, slider->getValue());
     }
-
-    //[UsersliderValueChanged_Post]
-    //[/UsersliderValueChanged_Post]
 }
-
-
