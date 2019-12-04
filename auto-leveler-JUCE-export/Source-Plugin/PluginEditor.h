@@ -19,7 +19,6 @@
 /**
 */
 class C74GenAudioProcessorEditor  : public AudioProcessorEditor
-                                    
 {
 public:
     C74GenAudioProcessorEditor (C74GenAudioProcessor&);
@@ -33,15 +32,6 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     C74GenAudioProcessor& processor;
-    
-    //[UserVariables]   -- You can add your own custom variables in this section.
-    //[/UserVariables]
-
-    //==============================================================================
-    std::unique_ptr<Label> targetlabel;
-
-
-    //==============================================================================
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (C74GenAudioProcessorEditor)
 };

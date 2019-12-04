@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT aaxIdentifier="com.unit27.AutoLeveler" buildAAX="0" buildAU="0"
-              buildRTAS="0" buildVST="1" buildVST3="0" bundleIdentifier="com.unit27.AutoLeveler"
-              id="TNkzSt" includeBinaryInAppConfig="1" jucerVersion="5.4.5"
-              name="Auto Leveler" pluginAAXCategory="2" pluginAUExportPrefix="AutoLevelerAU"
-              pluginChannelConfigs="{1,1}, {2,2}" pluginCode="Plug" pluginDesc=""
-              pluginEditorRequiresKeys="0" pluginIsSynth="0" pluginManufacturer="Unit27"
-              pluginManufacturerCode="UN27" pluginName="Auto Leveler" pluginProducesMidiOut="0"
-              pluginRTASCategory="" pluginSilenceInIsSilenceOut="0" pluginWantsMidiIn="0"
-              projectType="audioplug" version="1.0.0" pluginFormats="buildVST">
-  <MAINGROUP id="j0DzSh" name="Auto Leveler">
-    <FILE id="DDNovd" name="PluginGUI.cpp" compile="1" resource="0" file="../Source-Plugin/PluginGUI.cpp"/>
-    <FILE id="zZ9RB5" name="PluginGUI.h" compile="0" resource="0" file="../Source-Plugin/PluginGUI.h"/>
+<JUCERPROJECT aaxIdentifier="com.cycling74.C74GenPlugin" buildAAX="0" buildAU="0"
+              buildRTAS="0" buildVST="1" buildVST3="0" bundleIdentifier="com.cycling74.C74GenPlugin"
+              id="TNkzSt" includeBinaryInAppConfig="1" jucerVersion="3.2.0"
+              name="C74GenPlugin" pluginAAXCategory="AAX_ePlugInCategory_Dynamics"
+              pluginAUExportPrefix="C74GenPluginAU" pluginChannelConfigs="{1,1}, {2,2}"
+              pluginCode="Plug" pluginDesc="" pluginEditorRequiresKeys="0"
+              pluginIsSynth="0" pluginManufacturer="c74" pluginManufacturerCode="CY74"
+              pluginName="C74GenPlugin" pluginProducesMidiOut="0" pluginRTASCategory=""
+              pluginSilenceInIsSilenceOut="0" pluginWantsMidiIn="0" projectType="audioplug"
+              version="1.0.0">
+  <MAINGROUP id="j0DzSh" name="C74GenPlugin">
     <GROUP id="{F0566F66-1E06-0640-9035-6D16F5EC007D}" name="Source">
       <GROUP id="{D858CDE4-A7B1-9228-042D-12B84C8895C0}" name="exported-code">
         <FILE compile="0" file="../exported-code/C74_GENPLUGIN.h" id="c1pCx7"
@@ -44,11 +43,11 @@
         <CONFIGURATION customXcodeFlags="&#9;&#9;&#9;&#9;OTHER_REZFLAGS = &quot;-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $(PROJECT_DIR)/../../../CoreAudioUtilityClasses/CoreAudio/AudioUnits/AUPublic/AUBase&quot; "
                        headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"
                        isDebug="1" name="Debug" optimisation="1" osxArchitecture="64BitUniversal"
-                       targetName="C74GenPlugin"/>
+                       osxCompatibility="default" osxSDK="default" targetName="C74GenPlugin"/>
         <CONFIGURATION customXcodeFlags="&#9;&#9;&#9;&#9;OTHER_REZFLAGS = &quot;-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $(PROJECT_DIR)/../../../CoreAudioUtilityClasses/CoreAudio/AudioUnits/AUPublic/AUBase&quot; "
                        headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"
                        isDebug="0" name="Release" optimisation="2" osxArchitecture="64BitUniversal"
-                       targetName="C74GenPlugin"/>
+                       osxCompatibility="default" osxSDK="default" targetName="C74GenPlugin"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../JUCE/modules"/>
@@ -93,49 +92,22 @@
         <MODULEPATH id="juce_audio_basics" path="..\JUCE\modules"/>
       </MODULEPATHS>
     </VS2013>
-    <VS2019 targetFolder="Builds/VisualStudio2019">
-      <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"/>
-        <CONFIGURATION isDebug="0" name="Release" headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_video"/>
-        <MODULEPATH id="juce_opengl"/>
-        <MODULEPATH id="juce_gui_extra"/>
-        <MODULEPATH id="juce_gui_basics"/>
-        <MODULEPATH id="juce_graphics"/>
-        <MODULEPATH id="juce_events"/>
-        <MODULEPATH id="juce_data_structures"/>
-        <MODULEPATH id="juce_cryptography"/>
-        <MODULEPATH id="juce_core"/>
-        <MODULEPATH id="juce_audio_processors"/>
-        <MODULEPATH id="juce_audio_plugin_client"/>
-        <MODULEPATH id="juce_audio_formats"/>
-        <MODULEPATH id="juce_audio_devices"/>
-        <MODULEPATH id="juce_audio_basics"/>
-      </MODULEPATHS>
-    </VS2019>
   </EXPORTFORMATS>
   <MODULES>
-    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
-             useGlobalPath="1"/>
-    <MODULES id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULES id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_video" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
-  <LIVE_SETTINGS>
-    <OSX buildEnabled="0"/>
-    <WINDOWS/>
-  </LIVE_SETTINGS>
 </JUCERPROJECT>

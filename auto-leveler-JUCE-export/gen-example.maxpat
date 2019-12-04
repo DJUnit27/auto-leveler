@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 86.0, 100.0, 1054.0, 664.0 ],
+		"rect" : [ 527.0, 178.0, 1227.0, 779.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -831,18 +831,18 @@
 									"originaltempo" : [ 120.0 ],
 									"basictuning" : [ 440 ],
 									"mode" : [ "basic" ],
-									"originallengthms" : [ 0.0 ],
-									"play" : [ 0 ],
+									"pitchshift" : [ 1.0 ],
 									"pitchcorrection" : [ 0 ],
 									"followglobaltempo" : [ 0 ],
-									"pitchshift" : [ 1.0 ],
-									"quality" : [ "basic" ],
 									"speed" : [ 1.0 ],
+									"quality" : [ "basic" ],
+									"slurtime" : [ 0.0 ],
 									"timestretch" : [ 0 ],
 									"formantcorrection" : [ 0 ],
-									"slurtime" : [ 0.0 ],
-									"originallength" : [ 0.0, "ticks" ],
+									"play" : [ 0 ],
 									"formant" : [ 1.0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"originallengthms" : [ 0.0 ],
 									"pitchshiftcent" : [ 0 ]
 								}
 
@@ -888,6 +888,57 @@
 						"parameter_mappable" : 0
 					}
 ,
+					"snapshot" : 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "snapshotlist",
+						"origin" : "vst~",
+						"type" : "list",
+						"subtype" : "Undefined",
+						"embed" : 1,
+						"snapshot" : 						{
+							"pluginname" : "C74GenPlugin.vst",
+							"plugindisplayname" : "C74GenPlugin",
+							"pluginsavedname" : "Macintosh HD:/Users/stb/dev/cycling74/gen-plugin-export/build-results/VST/C74GenPlugin.vst",
+							"pluginsaveduniqueid" : 0,
+							"version" : 1,
+							"isbank" : 0,
+							"isbase64" : 1,
+							"sliderorder" : [ 0, 1, 2, 3 ],
+							"slidervisibility" : [ 1, 1, 1, 1 ],
+							"blob" : "115.CMlaKA....fQPMDZ....A.Ea0cF....Y....A.........................................vM6AhHjEVavIhNf.iK0vBHhXlXwHhNf.iK4vBHhXlXxHhNf.iK0vBHhLGbxUVXjIhNf.iKv.Re.."
+						}
+,
+						"snapshotlist" : 						{
+							"current_snapshot" : 0,
+							"entries" : [ 								{
+									"filetype" : "C74Snapshot",
+									"version" : 1,
+									"name" : "C74GenPlugin.vst",
+									"origin" : "C74GenPlugin.vst",
+									"type" : "VST",
+									"subtype" : "AudioEffect",
+									"snapshot" : 									{
+										"pluginname" : "C74GenPlugin.vst",
+										"plugindisplayname" : "C74GenPlugin",
+										"pluginsavedname" : "Macintosh HD:/Users/stb/dev/cycling74/gen-plugin-export/build-results/VST/C74GenPlugin.vst",
+										"pluginsaveduniqueid" : 0,
+										"version" : 1,
+										"isbank" : 0,
+										"isbase64" : 1,
+										"sliderorder" : [ 0, 1, 2, 3 ],
+										"slidervisibility" : [ 1, 1, 1, 1 ],
+										"blob" : "115.CMlaKA....fQPMDZ....A.Ea0cF....Y....A.........................................vM6AhHjEVavIhNf.iK0vBHhXlXwHhNf.iK4vBHhXlXxHhNf.iK0vBHhLGbxUVXjIhNf.iKv.Re.."
+									}
+,
+									"embed" : 0
+								}
+ ]
+						}
+
+					}
+,
 					"text" : "vst~",
 					"varname" : "vst~",
 					"viewvisibility" : 1
@@ -924,8 +975,8 @@
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "signal" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "signal" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -937,7 +988,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 348.0, 106.0, 1054.0, 664.0 ],
+						"rect" : [ 994.0, 77.0, 892.0, 969.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1003,12 +1054,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-25",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 511.0, 189.0, 327.0, 22.0 ],
-									"text" : "param @name targetLevel @min -30 @max 0 @default -20"
+									"patching_rect" : [ 511.0, 189.0, 131.0, 50.0 ],
+									"text" : "param @name targetLevel @min -40 @max 0 @default -20"
 								}
 
 							}
@@ -1030,7 +1082,7 @@
 										}
 ,
 										"classnamespace" : "dsp.gen",
-										"rect" : [ 307.0, 237.0, 1054.0, 664.0 ],
+										"rect" : [ 988.0, 85.0, 890.0, 960.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1064,7 +1116,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 43.5, 680.0, 47.0, 22.0 ],
+													"patching_rect" : [ 37.0, 682.0, 47.0, 22.0 ],
 													"text" : "clip 0 1"
 												}
 
@@ -1112,7 +1164,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 9.0, 89.5, 36.0, 22.0 ],
-													"text" : "> -76"
+													"text" : "> -70"
 												}
 
 											}
@@ -1850,7 +1902,7 @@
 												"patchline" : 												{
 													"color" : [ 0.094893842935562, 0.722609400749207, 0.08217541873455, 1.0 ],
 													"destination" : [ "obj-2", 0 ],
-													"midpoints" : [ 53.0, 654.0, 53.0, 654.0 ],
+													"midpoints" : [ 53.0, 669.0, 46.5, 669.0 ],
 													"source" : [ "obj-16", 0 ]
 												}
 
@@ -1901,9 +1953,9 @@
 											}
 , 											{
 												"patchline" : 												{
-													"color" : [ 0.0, 1.0, 0.0, 1.0 ],
+													"color" : [ 0.0, 0.847058823529412, 0.007843137254902, 1.0 ],
 													"destination" : [ "obj-72", 0 ],
-													"midpoints" : [ 53.0, 714.0, 744.0, 714.0, 744.0, 702.0, 766.5, 702.0 ],
+													"midpoints" : [ 46.5, 714.0, 744.0, 714.0, 744.0, 702.0, 766.5, 702.0 ],
 													"source" : [ "obj-2", 0 ]
 												}
 
@@ -2415,7 +2467,7 @@
 												"patchline" : 												{
 													"color" : [ 0.692112028598785, 0.0, 0.033769007772207, 1.0 ],
 													"destination" : [ "obj-74", 1 ],
-													"midpoints" : [ 427.0, 649.0, 870.5, 649.0 ],
+													"midpoints" : [ 427.0, 642.0, 870.5, 642.0 ],
 													"source" : [ "obj-9", 0 ]
 												}
 
@@ -2423,7 +2475,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 485.0, 279.0, 119.0, 22.0 ],
+									"patching_rect" : [ 489.0, 284.0, 119.0, 22.0 ],
 									"text" : "gen autoGainControl"
 								}
 
@@ -8989,6 +9041,17 @@
 							}
 , 							{
 								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 250.0, 108.0, 35.0, 22.0 ],
+									"text" : "out 3"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-14",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
@@ -9117,7 +9180,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 0 ],
-									"midpoints" : [ 259.5, 270.0, 494.5, 270.0 ],
+									"midpoints" : [ 259.5, 270.0, 498.5, 270.0 ],
 									"source" : [ "obj-19", 0 ]
 								}
 
@@ -9143,7 +9206,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 1 ],
-									"midpoints" : [ 378.5, 270.0, 519.5, 270.0 ],
+									"midpoints" : [ 378.5, 270.0, 523.5, 270.0 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -9152,7 +9215,7 @@
 								"patchline" : 								{
 									"color" : [ 0.012558881193399, 0.201860666275024, 0.700787901878357, 1.0 ],
 									"destination" : [ "obj-34", 0 ],
-									"midpoints" : [ 494.5, 309.0, 462.0, 309.0, 462.0, 42.0, 328.5, 42.0 ],
+									"midpoints" : [ 498.5, 309.0, 462.0, 309.0, 462.0, 42.0, 328.5, 42.0 ],
 									"source" : [ "obj-23", 0 ]
 								}
 
@@ -9160,7 +9223,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 2 ],
-									"midpoints" : [ 520.5, 270.0, 544.5, 270.0 ],
+									"midpoints" : [ 520.5, 270.0, 548.5, 270.0 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -9169,7 +9232,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-13", 1 ],
 									"midpoints" : [ 328.5, 93.0, 85.0, 93.0 ],
-									"order" : 2,
+									"order" : 3,
 									"source" : [ "obj-34", 0 ]
 								}
 
@@ -9178,7 +9241,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-14", 1 ],
 									"midpoints" : [ 328.5, 93.0, 173.0, 93.0 ],
-									"order" : 1,
+									"order" : 2,
 									"source" : [ "obj-34", 0 ]
 								}
 
@@ -9186,8 +9249,17 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 3 ],
-									"midpoints" : [ 328.5, 150.0, 498.0, 150.0, 498.0, 270.0, 569.5, 270.0 ],
+									"midpoints" : [ 328.5, 150.0, 498.0, 150.0, 498.0, 270.0, 573.5, 270.0 ],
 									"order" : 0,
+									"source" : [ "obj-34", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"midpoints" : [ 328.5, 93.0, 259.5, 93.0 ],
+									"order" : 1,
 									"source" : [ "obj-34", 0 ]
 								}
 
@@ -9203,7 +9275,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-23", 4 ],
-									"midpoints" : [ 743.0, 270.0, 594.5, 270.0 ],
+									"midpoints" : [ 743.0, 270.0, 598.5, 270.0 ],
 									"source" : [ "obj-41", 0 ]
 								}
 
@@ -9215,6 +9287,7 @@
 					"patching_rect" : [ 15.0, 384.0, 102.0, 25.0 ],
 					"saved_object_attributes" : 					{
 						"autoexport" : 0,
+						"exportfolder" : "D:/Projects/Developer/auto-leveler/auto-leveler-JUCE-export/exported-code/",
 						"exportname" : "C74_GENPLUGIN",
 						"exportscript" : "D:/Projects/Developer/auto-leveler/auto-leveler-JUCE-export/post-export.py",
 						"exportscriptargs" : "--type VST --name C74GenPlugin --channelconf \"{1,1}, {2,2}\" --configuration Debug"

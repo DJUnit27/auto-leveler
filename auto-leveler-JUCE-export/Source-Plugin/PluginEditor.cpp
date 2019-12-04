@@ -16,53 +16,23 @@
 C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
-    //[Constructor_pre] You can add your own custom stuff here..
-    //[/Constructor_pre]
-
-    targetlabel.reset (new Label ("targetlabel",
-                                  TRANS("Target: 20 LKFS")));
-    addAndMakeVisible (targetlabel.get());
-    targetlabel->setFont (Font (15.00f, Font::plain).withTypefaceStyle ("Regular"));
-    targetlabel->setJustificationType (Justification::centred);
-    targetlabel->setEditable (false, false, false);
-    targetlabel->setColour (TextEditor::textColourId, Colours::black);
-    targetlabel->setColour (TextEditor::backgroundColourId, Colour (0x00000000));
-
-    targetlabel->setBounds (20, 75, 180, 24);
-
-
-    //[UserPreSize]
-    //[/UserPreSize]
-
-    setSize (220, 150);
-
-
-    //[Constructor] You can add your own custom stuff here..
-    //[/Constructor]
+    // Make sure that before the constructor has finished, you've set the
+    // editor's size to whatever you need it to be.
+    setSize (400, 300);
 }
 
 C74GenAudioProcessorEditor::~C74GenAudioProcessorEditor()
 {
-    //[Destructor_pre]. You can add your own custom destruction code here..
-    //[/Destructor_pre]
-
-    targetlabel = nullptr;
-
-
-    //[Destructor]. You can add your own custom destruction code here..
-    //[/Destructor]
 }
 
 //==============================================================================
 void C74GenAudioProcessorEditor::paint (Graphics& g)
 {
-    //[UserPrePaint] Add your own custom painting code here..
-    //[/UserPrePaint]
+    g.fillAll (Colours::white);
 
-    g.fillAll (Colour (0xff323e44));
-
-    //[UserPaint] Add your own custom painting code here..
-    //[/UserPaint]
+    g.setColour (Colours::black);
+    g.setFont (15.0f);
+    g.drawFittedText ("Hello World!", getLocalBounds(), Justification::centred, 1);
 }
 
 void C74GenAudioProcessorEditor::resized()
