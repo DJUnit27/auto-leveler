@@ -34,7 +34,7 @@ GUI::GUI ()
 
     targetLevel.reset (new Slider ("targetLevel"));
     addAndMakeVisible (targetLevel.get());
-    targetLevel->setRange (-40, 0, 0.01);
+    targetLevel->setRange (-30, 0, 0.01);
     targetLevel->setSliderStyle (Slider::RotaryHorizontalVerticalDrag);
     targetLevel->setTextBoxStyle (Slider::TextBoxBelow, false, 80, 20);
     targetLevel->addListener (this);
@@ -133,7 +133,7 @@ BEGIN_JUCER_METADATA
                  initialHeight="400">
   <BACKGROUND backgroundColour="ff323e44"/>
   <SLIDER name="targetLevel" id="810d734cf7aead29" memberName="targetLevel"
-          virtualName="" explicitFocusOrder="0" pos="0 48 216 144" min="-40.0"
+          virtualName="" explicitFocusOrder="0" pos="0 48 216 144" min="-30.0"
           max="0.0" int="0.01" style="RotaryHorizontalVerticalDrag" textBoxPos="TextBoxBelow"
           textBoxEditable="1" textBoxWidth="80" textBoxHeight="20" skewFactor="1.0"
           needsCallback="1"/>
