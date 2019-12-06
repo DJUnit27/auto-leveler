@@ -82,7 +82,7 @@ void GUI::paint (Graphics& g)
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
 
-    g.fillAll (Colour (0xff323e44));
+    g.fillAll (Colour (0xff536771));
 
     //[UserPaint] Add your own custom painting code here..
     //[/UserPaint]
@@ -131,7 +131,7 @@ BEGIN_JUCER_METADATA
                  constructorParams="" variableInitialisers="" snapPixels="8" snapActive="1"
                  snapShown="1" overlayOpacity="0.330" fixedSize="0" initialWidth="600"
                  initialHeight="400">
-  <BACKGROUND backgroundColour="ff323e44"/>
+  <BACKGROUND backgroundColour="ff536771"/>
   <SLIDER name="targetLevel" id="810d734cf7aead29" memberName="targetLevel"
           virtualName="" explicitFocusOrder="0" pos="0 48 216 144" min="0.0"
           max="1.0" int="0.01" style="RotaryHorizontalVerticalDrag" textBoxPos="TextBoxBelow"
