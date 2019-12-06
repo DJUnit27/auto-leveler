@@ -43,12 +43,12 @@
       <CONFIGURATIONS>
         <CONFIGURATION customXcodeFlags="&#9;&#9;&#9;&#9;OTHER_REZFLAGS = &quot;-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $(PROJECT_DIR)/../../../CoreAudioUtilityClasses/CoreAudio/AudioUnits/AUPublic/AUBase&quot; "
                        headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"
-                       isDebug="1" name="Debug" optimisation="1" osxArchitecture="64BitUniversal"
-                       targetName="C74GenPlugin"/>
+                       isDebug="1" name="Debug" optimisation="1" osxArchitecture="64BitIntel"
+                       targetName="AutoLeveler"/>
         <CONFIGURATION customXcodeFlags="&#9;&#9;&#9;&#9;OTHER_REZFLAGS = &quot;-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I $(PROJECT_DIR)/../../../CoreAudioUtilityClasses/CoreAudio/AudioUnits/AUPublic/AUBase&quot; "
                        headerPath="$(PROJECT_DIR)/../../exported-code&#10;$(PROJECT_DIR)/../../exported-code/gen_dsp"
-                       isDebug="0" name="Release" optimisation="2" osxArchitecture="64BitUniversal"
-                       targetName="C74GenPlugin"/>
+                       isDebug="0" name="Release" optimisation="2" osxArchitecture="64BitIntel"
+                       targetName="AutoLeveler"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_core" path="../JUCE/modules"/>
@@ -136,5 +136,6 @@
   <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
   <LIVE_SETTINGS>
     <WINDOWS/>
+    <OSX/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>
