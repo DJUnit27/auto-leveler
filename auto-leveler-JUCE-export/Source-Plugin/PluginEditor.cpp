@@ -62,7 +62,7 @@ void C74GenAudioProcessorEditor::sliderValueChanged(Slider* slider)
     if (slider->getName() == targetSlider.getName())
     {
         // Convert targetSlider dB value to absolute
-        targetSliderVal = pow(10, slider->getValue() / 20);
-        processor.setParameter(0, targetSliderVal);
+        targetSliderValue = pow(10, slider->getValue() / 20);
+        processor.setParameter(0, targetSliderValue);
     }
 }
