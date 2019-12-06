@@ -36,6 +36,7 @@ private:
     C74GenAudioProcessor& processor;
 
     Slider targetSlider;
+    float targetSliderValue;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (C74GenAudioProcessorEditor)
 };
