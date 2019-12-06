@@ -8,7 +8,7 @@
               pluginEditorRequiresKeys="0" pluginIsSynth="0" pluginManufacturer="Unit27"
               pluginManufacturerCode="UN27" pluginName="AutoLeveler" pluginProducesMidiOut="0"
               pluginRTASCategory="" pluginSilenceInIsSilenceOut="0" pluginWantsMidiIn="0"
-              projectType="audioplug" version="0.0.1" pluginFormats="buildVST">
+              projectType="audioplug" version="0.0.2" pluginFormats="buildVST">
   <MAINGROUP id="j0DzSh" name="AutoLeveler">
     <GROUP id="{F0566F66-1E06-0640-9035-6D16F5EC007D}" name="Source">
       <FILE id="ZBzt2i" name="GUI.cpp" compile="1" resource="0" file="../Source-Plugin/GUI.cpp"/>
