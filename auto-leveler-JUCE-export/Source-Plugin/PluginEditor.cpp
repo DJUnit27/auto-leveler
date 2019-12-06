@@ -17,7 +17,7 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
 
-    setSize(200, 200);
+    setSize(200, 220);
 
     // These define the parameter of our slider object
     targetSlider.setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
@@ -28,8 +28,12 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     targetSlider.setValue(-14.0);
     targetSlider.setDoubleClickReturnValue(true, -14.0);
 
+    targetLabel.setText("Target", dontSendNotification);
+    targetLabel.setJustificationType(Justification::centred);
+
     // this function adds the slider to the editor
     addAndMakeVisible(&targetSlider);
+    addAndMakeVisible(&targetLabel);
 
     // add the listener to the slider
     targetSlider.addListener(this);
@@ -54,7 +58,8 @@ void C74GenAudioProcessorEditor::paint (Graphics& g)
 void C74GenAudioProcessorEditor::resized()
 {
     // sets the position and size of the slider with arguments (x, y, width, height)
-    targetSlider.setBounds(20, 20, 160, getHeight() - 60);
+    targetSlider.setBounds(20, 40, 160, getHeight() - 80);
+    targetLabel.setBounds(0, 20, getWidth(), 20);
 }
 
 void C74GenAudioProcessorEditor::sliderValueChanged(Slider* slider)
