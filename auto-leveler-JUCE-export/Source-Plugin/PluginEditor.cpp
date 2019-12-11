@@ -29,6 +29,7 @@ C74GenAudioProcessorEditor::C74GenAudioProcessorEditor (C74GenAudioProcessor& p)
     targetSlider.setDoubleClickReturnValue(true, -14.0);
 
     targetLabel.setText("Target", dontSendNotification);
+    targetLabel.attachToComponent(&targetSlider, false);
     targetLabel.setJustificationType(Justification::centred);
 
     // this function adds the slider to the editor
@@ -59,7 +60,7 @@ void C74GenAudioProcessorEditor::resized()
 {
     // sets the position and size of the slider with arguments (x, y, width, height)
     targetSlider.setBounds(20, 40, 160, getHeight() - 80);
-    targetLabel.setBounds(0, 20, getWidth(), 20);
+    // targetLabel.setBounds(0, 20, getWidth(), 20);
 }
 
 void C74GenAudioProcessorEditor::sliderValueChanged(Slider* slider)
