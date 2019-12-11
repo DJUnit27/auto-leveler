@@ -58,8 +58,16 @@ void C74GenAudioProcessorEditor::paint (Graphics& g)
 
 void C74GenAudioProcessorEditor::resized()
 {
+    int windowHeight = getHeight();
+    int windowWidth = getWidth();
+    int windowHorizontalCenter = windowWidth / 2;
+    int windowVerticalCenter = windowHeight / 2;
+    int margin = 20;
+    int labelSpace = 40;
+    int sliderSize = 160;
+
     // sets the position and size of the slider with arguments (x, y, width, height)
-    targetSlider.setBounds(20, 40, 160, getHeight() - 80);
+    targetSlider.setBounds(windowHorizontalCenter - (sliderSize / 2), windowVerticalCenter - (sliderSize / 2), sliderSize, sliderSize);
     // targetLabel.setBounds(0, 20, getWidth(), 20);
 }
 
